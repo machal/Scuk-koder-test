@@ -7952,3 +7952,21 @@ div > .scuk-nr-box:last-child {
     height: 60px;
   }
 }
+.ratings {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 30px;
+    
+    background-color: #eee;
+}
+.rating-ok, .rating-ko {
+    display:block;
+    background-color: #fff;
+    padding: 10px;
+}
+.rating-ok {
+    text-align:right;   
+}
+.rating-ko {
+    text-align:left;
+}
