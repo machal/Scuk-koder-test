@@ -7952,50 +7952,82 @@ div > .scuk-nr-box:last-child {
     height: 60px;
   }
 }
-.ratings {
-    font-size: 25px;
-    font-weight: 800;
-    line-height: 30px;
-    display: block;
-    background-color: #eeeeee;
-    height:100px;
-    
+@media (min-width: 768px) {
+	.ratings-ok, .ratings-ko {
+    	background-color: #eeeeee;
+	    font-size: 30px;
+	    font-weight: 800;
+	    line-height: 40px;
+	}
+	.ratings-ok {
+	    text-align: right;
+    }
+	.ratings-ko {
+	    text-align: left;
+    }
+	.face-smile {
+	    float:left;
+	    margin-left: 10px;
+	}
+	.face-sad {
+	    float: right;
+	    margin-right: 10px;
+	}
+	.arrow-right, .arrow-left {
+    	width: 0; 
+		height: 0; 
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		background-color: #ffffff;
+	}
+	.arrow-right {
+		border-left: 20px solid #eeeeee;
+		margin-left: 10px;
+	    float: right;
+	}
+	.arrow-left {
+		border-right: 20px solid #eeeeee;
+		margin-right: 10px;
+		float:left;
+	}
 }
-.rating-line {
-    background-color: #ffffff;
-    margin-top: 40px;
-    display: block;
-}
-.rating-number {
-   
-}
-.ratings-ok {
-    text-align: right;
-    
-}
-.ratings-ko {
-    text-align: left;
-   
-}
-.arrow-right {
-	width: 0; 
-	height: 0; 
-	border-top: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-left: 15px solid #ffffff;
-	
-	background-color: #eeeeee;
-	margin-left: 10px;
-    float: right;
-}
-.arrow-left {
-	width: 0; 
-	height: 0; 
-	border-top: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-right: 15px solid #ffffff;
-
-	background-color: #eeeeee;
-	margin-right: 10px; 
-	float:left;
+@media (max-width: 767px) {
+	.ratings-ok, .ratings-ko {
+    	margin-bottom: 10px;
+    	background-color: #eeeeee;
+	    font-size: 20px;
+	    font-weight: 800;
+	    line-height: 30px;
+	}
+	.ratings-ok {
+	    text-align: right;
+    }
+	.ratings-ko {
+	    text-align: left;
+    }
+	.face-smile {
+	    float:left;
+	    margin-left: 10px;
+	}
+	.face-sad {
+	    float: right;
+	    margin-right: 10px;
+	}
+	.arrow-right, .arrow-left {
+    	width: 0; 
+		height: 0; 
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+		background-color: #ffffff;
+	}
+	.arrow-right {
+		border-left: 15px solid #eeeeee;
+		margin-left: 10px;
+	    float: right;
+	}
+	.arrow-left {
+		border-right: 15px solid #eeeeee;
+		margin-right: 10px;
+		float: left;
+	}
 }
