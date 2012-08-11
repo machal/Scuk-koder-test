@@ -7953,36 +7953,49 @@ div > .scuk-nr-box:last-child {
   }
 }
 .ratings {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 800;
-    line-height: 33px;
-    
+    line-height: 30px;
+    display: block;
     background-color: #eeeeee;
+    height:100px;
+    
 }
 .rating-line {
     background-color: #ffffff;
+    margin-top: 40px;
+    display: block;
 }
-.rating-ok {
-   text-align: right;
-
-.rating-ko {
+.rating-number {
+   
+}
+.ratings-ok {
+    text-align: right;
+    
+}
+.ratings-ko {
     text-align: left;
+   
 }
-.arrow-right, .arrow-left {
+.arrow-right {
 	width: 0; 
 	height: 0; 
 	border-top: 15px solid transparent;
 	border-bottom: 15px solid transparent;
-	display: inline;
+	border-left: 15px solid #ffffff;
+	
 	background-color: #eeeeee;
-}
-.arrow-right {
-    margin-left: 10px;
-    border-left: 15px solid #ffffff;
+	margin-left: 10px;
     float: right;
 }
 .arrow-left {
-	margin-right: 10px;
-	border-right: 15px solid #ffffff; 
+	width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-right: 15px solid #ffffff;
+
+	background-color: #eeeeee;
+	margin-right: 10px; 
 	float:left;
 }
