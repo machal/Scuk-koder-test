@@ -8985,7 +8985,7 @@ div > .scuk-nr-box:last-child {
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-  filter: progid:dximagetransform.microsoft.alphaimageloader(src='../img/visit_ko.png', sizingMethod='scale');
+  filter: progid:dximagetransform.microsoft.alphaimageloader(src='img/visit_ko.png', sizingMethod='scale');
 }
 .scuk-visit-rate:hover,
 .scuk-visit-rate:focus,
@@ -8997,12 +8997,13 @@ div > .scuk-nr-box:last-child {
 }
 /*  --- Vetsi velikost ikonky s dojmem */
 .vote-bar .scuk-visit-rate {
-  width: 46px;
-  background-size: 35px 35px;
-  height: 46px;
+  width: 34px;
+  height: 34px;
+  top: 6px;
+  margin: 0 10px 0 10px;
   text-indent: 500px;
   position: relative;
-  line-height: 35px;
+  line-height: 34px;
   overflow: hidden;
 }
 /* --- Ikonka s cenovou urovni ---
