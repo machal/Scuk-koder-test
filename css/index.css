@@ -7526,10 +7526,18 @@ div > .scuk-nr-box:last-child {
   background-size: contain;
 }
 .scuk-visit-rate.visit-ok {
-  background: url('../img/visit_ok.png') no-repeat center center;
+    background: url('../img/visit_ok.png') no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 }
 .scuk-visit-rate.visit-ko {
-  background: url('../img/visit_ko.png') no-repeat center center;
+    background: url('../img/visit_ko.png') no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 }
 .scuk-visit-rate:hover,
 .scuk-visit-rate:focus,
@@ -7951,4 +7959,74 @@ div > .scuk-nr-box:last-child {
   .scuk-partner-banner .text p {
     height: 60px;
   }
+}
+
+
+.scuk-visit {
+    background: #eee;
+    padding-top: 10px;
+    border-radius: 25px;
+}
+
+.scuk-visitors {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+.scuk-visitors a:first-child {
+    margin-left: 10px;
+}
+
+.scuk-votes {
+    height: 40px;
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 42px;
+}
+
+
+.positive {
+    position: relative;
+    float: left;
+    width: 73%;
+    height: 40px;
+    background: #fff;
+    text-align: right;
+    background-image: url('../img/visit_ok.png');
+    background-repeat: no-repeat;
+    background-position: 2%;
+    background-size: 38px;
+}
+
+.negative {
+    position: relative;
+    float: right;
+    width: 22%;
+    height: 40px;
+    background: #fff;
+    text-align: left;
+    background-image: url('../img/visit_ko.png');
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: 38px;
+}
+
+.positive:after {
+    content:" ";
+    position: absolute;
+    right: -40px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    border-width: 20px;
+}
+
+.negative:after {
+    content: " ";
+    position: absolute;
+    left: -40px;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+    border-width: 20px;
 }
