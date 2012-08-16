@@ -278,6 +278,76 @@
   clear: both;
 }
 
+.vote-bar-wrapper{
+  
+}
+
+.vote-bar{
+	
+	height: 46px;
+	background-color: #EEE;	
+	position: relative;
+	display: block;
+	line-height: 46px;
+	font-size:30px;
+	font-weight: bold;
+
+	&.vote-bar-ok{
+		float: left;
+		text-align: right;
+
+
+		&:after{
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-color: transparent transparent transparent #EEE;
+			border-style: solid;
+			border-width: 23px;
+			position: absolute;
+			top: 0px;
+			left: 100%;
+
+		}
+	}
+
+	&.vote-bar-nok{
+		float: right;
+		text-align: left;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-color: transparent #EEE transparent transparent;
+			border-style: solid;
+			border-width: 23px;
+			position: absolute;
+			top: 0px;
+			right: 100%;
+
+		}
+
+		
+	}
+
+	& .visit-ok{
+		float: left;
+	}
+
+	& .visit-ko{
+		float:right;
+	}
+
+
+
+
+}
+
+
+
 
 /* --- Seznamy podobnych - docasna verze z prvniho prototypu --- */
 
@@ -1121,11 +1191,27 @@ div > .scuk-nr-box:last-child {
 	.background-size(contain);
 
 	&.visit-ok {
+
 			background: url('../img/visit_ok.png') no-repeat center center;
+			.background-size(contain);
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+				src='img/visit_ok.png',
+				enabled=true,
+				sizingMethod='scale');
+			-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+				src='img/visit_ok.png',
+				enabled=true,
+				sizingMethod='scale');
+
+
 	}
 
 	&.visit-ko {
 			background: url('../img/visit_ko.png') no-repeat center center;
+			.background-size(contain);
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+				src='img/visit_ko.png',
+				sizingMethod='scale');
 	}
 
 	&:hover,
@@ -1134,6 +1220,20 @@ div > .scuk-nr-box:last-child {
 	  .opacity(75);
 	}
 
+}
+
+/*  --- Vetsi velikost ikonky s dojmem */
+
+
+.vote-bar .scuk-visit-rate{
+		width: 34px;
+		height: 34px;
+		top:6px;
+		margin: 0 10px 0 10px;
+		text-indent: 500px;
+		position: relative;
+		line-height: 34px;
+		overflow: hidden;
 }
 
 
