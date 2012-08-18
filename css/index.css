@@ -7030,6 +7030,7 @@ div > .scuk-nr-box:last-child {
   font-size: 18px;
   line-height: 24px;
   line-height: 40px;
+  background-repeat: no-repeat;
 }
 @media (max-width: 767px) {
   .scuk-visit-pomer {
@@ -7040,38 +7041,22 @@ div > .scuk-nr-box:last-child {
 .scuk-visit-pomer.ok {
   display: inline-block;
   float: left;
-  width: 67%;
+  width: 65%;
   position: relative;
   text-align: right;
-}
-.scuk-visit-pomer.ok:after {
-  position: absolute;
-  right: -18px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-top: 1.15em solid transparent;
-  border-bottom: 1.15em solid transparent;
-  border-left: 1em solid white;
+  padding-right: 5%;
+  background-image: url('../img/sipka_vpravo.png');
+  background-position: right center;
 }
 .scuk-visit-pomer.ko {
   position: relative;
   text-align: left;
   display: inline-block;
   float: right;
-  width: 28%;
-}
-.scuk-visit-pomer.ko:before {
-  position: absolute;
-  left: -18px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-top: 1.15em solid transparent;
-  border-bottom: 1.15em solid transparent;
-  border-right: 1em solid white;
+  width: 25%;
+  padding-left: 5%;
+  background-image: url('../img/sipka_vlavo.png');
+  background-position: left center;
 }
 /* --- Boxik s navstevou podniku --- */
 .scuk-visit-box {
