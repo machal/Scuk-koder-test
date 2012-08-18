@@ -255,6 +255,14 @@
 
 /* --- Hodnoceni --- */
 
+.scuk-reviews {
+	.thicker-grid {
+			background-color: red;
+			.border-radius(15px);
+			// .center;
+	}
+}
+
 .scuk-reviews .scuk-review {
   margin-bottom: @baseFontSize;
 }
@@ -637,6 +645,8 @@ div > .scuk-nr-box:last-child {
 
 	// Hodnoceni
 	.scuk-visit-rate {
+		// background-size: 24px 24px;
+
 	}
 
 	// Od tabletu na vysku se boxik s navstevou
@@ -1122,10 +1132,12 @@ div > .scuk-nr-box:last-child {
 
 	&.visit-ok {
 			background: url('../img/visit_ok.png') no-repeat center center;
+				.background-size(contain);
 	}
 
 	&.visit-ko {
 			background: url('../img/visit_ko.png') no-repeat center center;
+				.background-size(contain);
 	}
 
 	&:hover,

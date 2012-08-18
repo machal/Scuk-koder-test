@@ -6723,6 +6723,12 @@ a:active img {
   color: #333;
 }
 /* --- Hodnoceni --- */
+.scuk-reviews .thicker-grid {
+  background-color: red;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
 .scuk-reviews .scuk-review {
   margin-bottom: 15px;
 }
@@ -7527,9 +7533,17 @@ div > .scuk-nr-box:last-child {
 }
 .scuk-visit-rate.visit-ok {
   background: url('../img/visit_ok.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 .scuk-visit-rate.visit-ko {
   background: url('../img/visit_ko.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 .scuk-visit-rate:hover,
 .scuk-visit-rate:focus,
