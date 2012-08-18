@@ -257,7 +257,7 @@
 
 .scuk-reviews {
 	.thicker-grid {
-			background-color: red;
+			background-color: @grayLighter;
 			.border-radius(15px);
 			// .center;
 	}
@@ -594,8 +594,56 @@ div > .scuk-nr-box:last-child {
 	}
 }
 
+/* --- pomer hodnotenia navstev --- */
 
+.scuk-visit-pomer {
 
+	background-color: #fff;
+	.fontSizeMedium();
+	line-height: 40px;
+
+	&.ok {
+		display:inline-block;
+		float:left;
+		width:67%;
+		position: relative;
+		text-align: right;
+	}
+
+	&.ok:after{
+		position: absolute;
+		// top:2px;
+		right:-18px;
+		content: "";
+		display: inline-block;
+	    width: 0; 
+	    height: 0; 
+	    border-top: 1.15em solid transparent;
+	    border-bottom: 1.15em solid transparent;
+	    border-left: 1em solid white;
+	}
+
+	&.ko {
+		position: relative;
+		text-align: left;
+		display:inline-block;
+		float:right;
+		width:28%;
+	}
+
+	&.ko:before{
+		position: absolute;
+		left:-18px;
+		content: "";
+		display: inline-block;
+	    width: 0; 
+	    height: 0; 
+	    border-top: 1.15em solid transparent;
+	    border-bottom: 1.15em solid transparent;
+	    border-right: 1em solid white;
+	}
+
+}
 
 /* --- Boxik s navstevou podniku --- */
 
@@ -604,7 +652,7 @@ div > .scuk-nr-box:last-child {
 	height: 40px;
 	overflow: hidden;
 	position: relative;
-	background: @grayLighter;
+	background: #fff;
 	margin-bottom: .5*@baseLineHeight;
 
 	hr {
