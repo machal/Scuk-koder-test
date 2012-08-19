@@ -586,7 +586,98 @@ div > .scuk-nr-box:last-child {
 	}
 }
 
+/* --- Hodnoceni podniku (bar) -- */ 
 
+
+.scuk-score-bar {
+	position: relative;
+	background: @grayLighter;
+	padding: 0 45px;
+	height: 46px;
+	.box-sizing(border-box);
+	.fontSizeBig();
+	font-weight: bold;
+	
+	@media (max-width: 767px) {
+		padding: 0;
+	}
+
+	&:before,
+	&:after {
+		background: transparent url('../img/visit_ko.png') right center no-repeat;
+		background-size: contain;
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		width: 45px;
+		height: 100%;
+		z-index: 20;
+
+		@media (max-width: 767px) {
+			top: -50px
+		}
+	}
+
+	&:before {
+		background: transparent url('../img/visit_ok.png') left center no-repeat;
+		background-size: contain;
+		left: 0;
+		right: auto;
+	}
+
+	table {
+		width: 100%;
+
+		td {
+			padding: 0;
+		}
+	}
+
+}
+
+.scuk-bar {
+	text-align: left; 
+	vertical-align: middle;
+	line-height: 46px;
+
+	span {
+		display: block;
+		height: 100%;
+		position: relative;
+		padding: 0 10px 0 23px;
+
+		&:after {
+			position: absolute;
+			content: "";
+			display: block;
+			top: 0;
+			left: -1px;
+			width: 0px;
+			height: 0px;
+			border-top: 23px solid white;
+			border-bottom: 23px solid white;
+			border-right: 23px solid @grayLighter;
+		} 
+	}
+
+
+	&:first-child {
+		text-align: right;
+
+		span {
+			padding: 0 23px 0 10px;
+
+			&:after {
+				border-left: 23px solid @grayLighter;
+				border-right: 0;
+				right: -1px;
+				left: auto;
+			}
+		}
+	}
+}
+	
 
 
 /* --- Boxik s navstevou podniku --- */
@@ -1121,11 +1212,11 @@ div > .scuk-nr-box:last-child {
 	.background-size(contain);
 
 	&.visit-ok {
-			background: url('../img/visit_ok.png') no-repeat center center;
+			background-image: url('../img/visit_ok.png');
 	}
 
 	&.visit-ko {
-			background: url('../img/visit_ko.png') no-repeat center center;
+			background-image: url('../img/visit_ko.png');
 	}
 
 	&:hover,
