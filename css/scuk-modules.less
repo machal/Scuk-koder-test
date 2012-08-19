@@ -255,6 +255,14 @@
 
 /* --- Hodnoceni --- */
 
+.scuk-reviews {
+	.thicker-grid {
+			background-color: @grayLighter;
+			.border-radius(15px);
+			// .center;
+	}
+}
+
 .scuk-reviews .scuk-review {
   margin-bottom: @baseFontSize;
 }
@@ -586,8 +594,62 @@ div > .scuk-nr-box:last-child {
 	}
 }
 
+/* --- pomer hodnotenia navstev --- */
 
+.scuk-visit-pomer {
 
+	background-color: #fff;
+	.fontSizeMedium();
+	line-height: 40px;
+	background-repeat:no-repeat;
+	&.ok {
+		display:inline-block;
+		float:left;
+		width:65%;
+		position: relative;
+		text-align: right;
+		padding-right: 5%;
+		background-image: url('../img/sipka_vpravo.png');
+		background-position: right center;
+	}
+
+	// &.ok:after{
+	// 	position: absolute;
+	// 	// top:2px;
+	// 	right:-18px;
+	// 	content: "";
+	// 	display: inline-block;
+	//     width: 0; 
+	//     height: 0; 
+	//     border-top: 1.15em solid transparent;
+	//     border-bottom: 1.15em solid transparent;
+	//     border-left: 1em solid white;
+	// }
+
+	&.ko {
+		position: relative;
+		text-align: left;
+		display:inline-block;
+		float:right;
+		width:25%;
+		padding-left: 5%;
+		background-image: url('../img/sipka_vlavo.png');
+		background-position: left center;
+	}
+
+	// &.ko:before{
+	// 	position: absolute;
+	// 	left:-18px;
+	// 	content: "";
+	// 	display: inline-block;
+	//     width: 0; 
+	//     height: 0; 
+	//     border-top: 1.15em solid transparent;
+	//     border-bottom: 1.15em solid transparent;
+	//     border-right: 1em solid white;
+	// }
+
+}
 
 /* --- Boxik s navstevou podniku --- */
 
@@ -596,7 +658,7 @@ div > .scuk-nr-box:last-child {
 	height: 40px;
 	overflow: hidden;
 	position: relative;
-	background: @grayLighter;
+	background: #fff;
 	margin-bottom: .5*@baseLineHeight;
 
 	hr {
@@ -637,6 +699,8 @@ div > .scuk-nr-box:last-child {
 
 	// Hodnoceni
 	.scuk-visit-rate {
+		// background-size: 24px 24px;
+
 	}
 
 	// Od tabletu na vysku se boxik s navstevou
@@ -1122,10 +1186,12 @@ div > .scuk-nr-box:last-child {
 
 	&.visit-ok {
 			background: url('../img/visit_ok.png') no-repeat center center;
+				.background-size(contain);
 	}
 
 	&.visit-ko {
 			background: url('../img/visit_ko.png') no-repeat center center;
+				.background-size(contain);
 	}
 
 	&:hover,

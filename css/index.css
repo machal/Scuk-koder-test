@@ -6723,6 +6723,12 @@ a:active img {
   color: #333;
 }
 /* --- Hodnoceni --- */
+.scuk-reviews .thicker-grid {
+  background-color: #eeeeee;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
 .scuk-reviews .scuk-review {
   margin-bottom: 15px;
 }
@@ -7018,6 +7024,40 @@ div > .scuk-nr-box:last-child {
   opacity: 0.75;
   filter: alpha(opacity=75);
 }
+/* --- pomer hodnotenia navstev --- */
+.scuk-visit-pomer {
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  line-height: 40px;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .scuk-visit-pomer {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+.scuk-visit-pomer.ok {
+  display: inline-block;
+  float: left;
+  width: 65%;
+  position: relative;
+  text-align: right;
+  padding-right: 5%;
+  background-image: url('../img/sipka_vpravo.png');
+  background-position: right center;
+}
+.scuk-visit-pomer.ko {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  float: right;
+  width: 25%;
+  padding-left: 5%;
+  background-image: url('../img/sipka_vlavo.png');
+  background-position: left center;
+}
 /* --- Boxik s navstevou podniku --- */
 .scuk-visit-box {
   -webkit-box-sizing: border-box;
@@ -7027,7 +7067,7 @@ div > .scuk-nr-box:last-child {
   height: 40px;
   overflow: hidden;
   position: relative;
-  background: #eeeeee;
+  background: #fff;
   margin-bottom: 10px;
 }
 .scuk-visit-box hr {
@@ -7527,9 +7567,17 @@ div > .scuk-nr-box:last-child {
 }
 .scuk-visit-rate.visit-ok {
   background: url('../img/visit_ok.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 .scuk-visit-rate.visit-ko {
   background: url('../img/visit_ko.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 .scuk-visit-rate:hover,
 .scuk-visit-rate:focus,
