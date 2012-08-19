@@ -7018,6 +7018,107 @@ div > .scuk-nr-box:last-child {
   opacity: 0.75;
   filter: alpha(opacity=75);
 }
+/* --- Hodnoceni podniku (bar) -- */.scuk-score-bar {
+  position: relative;
+  background: #eeeeee;
+  padding: 0 45px;
+  height: 46px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 28px;
+  line-height: 110%;
+  margin-bottom: 7.5px;
+  font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .scuk-score-bar {
+    font-size: 28px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .scuk-score-bar {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .scuk-score-bar {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .scuk-score-bar {
+    padding: 0;
+  }
+}
+.scuk-score-bar:before,
+.scuk-score-bar:after {
+  background: transparent url('../img/visit_ko.png') right center no-repeat;
+  background-size: contain;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 100%;
+  z-index: 20;
+}
+@media (max-width: 767px) {
+  .scuk-score-bar:before,
+  .scuk-score-bar:after {
+    top: -50px;
+  }
+}
+.scuk-score-bar:before {
+  background: transparent url('../img/visit_ok.png') left center no-repeat;
+  background-size: contain;
+  left: 0;
+  right: auto;
+}
+.scuk-score-bar table {
+  width: 100%;
+}
+.scuk-score-bar table td {
+  padding: 0;
+}
+.scuk-bar {
+  text-align: left;
+  vertical-align: middle;
+  line-height: 46px;
+}
+.scuk-bar span {
+  display: block;
+  height: 100%;
+  position: relative;
+  padding: 0 10px 0 23px;
+}
+.scuk-bar span:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -1px;
+  width: 0px;
+  height: 0px;
+  border-top: 23px solid white;
+  border-bottom: 23px solid white;
+  border-right: 23px solid #eeeeee;
+}
+.scuk-bar:first-child {
+  text-align: right;
+}
+.scuk-bar:first-child span {
+  padding: 0 23px 0 10px;
+}
+.scuk-bar:first-child span:after {
+  border-left: 23px solid #eeeeee;
+  border-right: 0;
+  right: -1px;
+  left: auto;
+}
 /* --- Boxik s navstevou podniku --- */
 .scuk-visit-box {
   -webkit-box-sizing: border-box;
@@ -7526,10 +7627,10 @@ div > .scuk-nr-box:last-child {
   background-size: contain;
 }
 .scuk-visit-rate.visit-ok {
-  background: url('../img/visit_ok.png') no-repeat center center;
+  background-image: url('../img/visit_ok.png');
 }
 .scuk-visit-rate.visit-ko {
-  background: url('../img/visit_ko.png') no-repeat center center;
+  background-image: url('../img/visit_ko.png');
 }
 .scuk-visit-rate:hover,
 .scuk-visit-rate:focus,
