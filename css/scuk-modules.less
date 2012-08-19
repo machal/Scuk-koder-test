@@ -278,6 +278,107 @@
   clear: both;
 }
 
+.scuk-reviews-ratio {
+	
+	@arrow-margin: .75em;
+	@icon-margin: 30px;
+	@icon-margin-mobile: 12px;
+
+	font-size: 20px;
+	line-height: 120%;
+	font-weight: bold;
+
+	//vetsi nez smartphony
+	@media (min-width: 481px) {
+		margin-left:-20px;
+		margin-right:-20px;
+	}
+
+	//desktopy a tablety
+	@media (min-width: 768px) {
+		font-size:28px;
+	}
+
+	div{
+		background-size:contain !important;
+		background-repeat:no-repeat !important;
+	}
+
+	.bar {
+		padding:.17em 0em;
+	}
+
+	// leva cast 
+
+	.ok {
+		width:88%;
+		
+		background:url("../img/visit_arrow_ok.png") right center;
+		display:inline-block;
+
+		.bar {
+			background-color:#fff;
+			margin-right:@arrow-margin;
+			text-align:right;
+
+			//vetsi nez smartphony
+			@media (min-width: 481px) {
+				.border-radius( 10px 0px 0px 10px );
+			}
+
+			div{
+				background:url("../img/visit_ok.png");
+				margin-left:@icon-margin;
+
+				//smartphony
+				@media (max-width: 480px) {
+					margin-left:@icon-margin-mobile;
+				}
+			}
+		}
+	}
+
+	// prava cast
+
+	.ko {
+		width:12%;
+
+		background:url("../img/visit_arrow_ko.png");
+		display:inline-block;
+
+		margin-left:-8px;
+
+		.bar {
+			
+			margin-left:@arrow-margin;
+			background-color:#fff ;
+			
+			//vetsi nez smartphony
+			@media (min-width: 481px) {
+				.border-radius( 0px 10px 10px 0px );
+			}
+
+			div{
+				background:url("../img/visit_ok.png") 100% 0;
+				margin-right:@icon-margin;
+
+				//smartphony
+				@media (max-width: 480px) {
+					margin-right:@icon-margin-mobile;
+				}
+			}
+		}
+	}
+
+	//pri male sirce pridat divu classu "small", ktera schova obrazek
+
+	.small div{
+		@media (max-width: 979px){
+			background:none !important;
+		} 
+	}
+}
+
 
 /* --- Seznamy podobnych - docasna verze z prvniho prototypu --- */
 
@@ -1118,7 +1219,7 @@ div > .scuk-nr-box:last-child {
 	height: 24px;
 	overflow: hidden;
 	text-indent: -500px;
-	.background-size(contain);
+	.background-size(contain) !important;
 
 	&.visit-ok {
 			background: url('../img/visit_ok.png') no-repeat center center;
