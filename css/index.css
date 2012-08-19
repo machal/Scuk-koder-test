@@ -6741,6 +6741,86 @@ a:active img {
 .scuk-reviews-more {
   clear: both;
 }
+.scuk-reviews-ratio {
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: bold;
+}
+@media (min-width: 481px) {
+  .scuk-reviews-ratio {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media (min-width: 768px) {
+  .scuk-reviews-ratio {
+    font-size: 28px;
+  }
+}
+.scuk-reviews-ratio div {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+.scuk-reviews-ratio .bar {
+  padding: .17em 0em;
+}
+.scuk-reviews-ratio .ok {
+  width: 88%;
+  background: url("../img/visit_arrow_ok.png") right center;
+  display: inline-block;
+}
+.scuk-reviews-ratio .ok .bar {
+  background-color: #fff;
+  margin-right: 0.75em;
+  text-align: right;
+}
+@media (min-width: 481px) {
+  .scuk-reviews-ratio .ok .bar {
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 0px 0px 10px;
+  }
+}
+.scuk-reviews-ratio .ok .bar div {
+  background: url("../img/visit_ok.png");
+  margin-left: 30px;
+}
+@media (max-width: 480px) {
+  .scuk-reviews-ratio .ok .bar div {
+    margin-left: 12px;
+  }
+}
+.scuk-reviews-ratio .ko {
+  width: 12%;
+  background: url("../img/visit_arrow_ko.png");
+  display: inline-block;
+  margin-left: -8px;
+}
+.scuk-reviews-ratio .ko .bar {
+  margin-left: 0.75em;
+  background-color: #fff ;
+}
+@media (min-width: 481px) {
+  .scuk-reviews-ratio .ko .bar {
+    -webkit-border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+.scuk-reviews-ratio .ko .bar div {
+  background: url("../img/visit_ok.png") 100% 0;
+  margin-right: 30px;
+}
+@media (max-width: 480px) {
+  .scuk-reviews-ratio .ko .bar div {
+    margin-right: 12px;
+  }
+}
+@media (max-width: 979px) {
+  .scuk-reviews-ratio .small div {
+    background: none !important;
+  }
+}
 /* --- Seznamy podobnych - docasna verze z prvniho prototypu --- */
 .scuk-related-list,
 .scuk-related-list li {
@@ -7520,10 +7600,10 @@ div > .scuk-nr-box:last-child {
   height: 24px;
   overflow: hidden;
   text-indent: -500px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+  background-size: contain !important;
 }
 .scuk-visit-rate.visit-ok {
   background: url('../img/visit_ok.png') no-repeat center center;
